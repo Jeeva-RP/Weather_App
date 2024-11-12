@@ -1,0 +1,55 @@
+/* src/components/EventForm.css */
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px; /* Maximum width for the form */
+    margin: auto; /* Center the form horizontally */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  }
+  
+  input {
+    margin-bottom: 15px; /* Spacing between inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Slightly rounded corners */
+    font-size: 16px; /* Font size for inputs */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+    background-color: black; /* Set background to white */
+    color: white; /* Change text color to white */
+  }
+  
+  input::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Placeholder text color */
+  }
+  
+  input:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+  }
+  
+  button {
+    padding: 10px 15px; /* Padding inside the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Slightly rounded corners */
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* Text color */
+    font-size: 16px; /* Font size for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    form {
+      width: 90%; /* Take 90% of the screen width on smaller devices */
+    }
+  }
+  

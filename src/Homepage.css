@@ -1,0 +1,17 @@
+/* src/pages/HomePage.css */
+.home-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Adjusts space between elements */
+    padding: 20px;
+  }
+  
+  .weather-container {
+    flex: 2; /* Adjust the flex basis as needed */
+    margin-right: 20px; /* Space between weather and events */
+  }
+  
+  .events-container {
+    flex: 1; /* Adjust the flex basis as needed */
+  }
+  

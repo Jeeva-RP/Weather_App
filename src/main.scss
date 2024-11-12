@@ -1,0 +1,240 @@
+@import "../node_modules/bootstrap/scss/functions";
+
+$primary: #1f63ee;
+$secondary: #fed401;
+// $light: #1ad6fd;
+$light: lighten(
+  $color: $primary,
+  $amount: 45,
+);
+$white: #fff;
+$dark: #212121;
+$black: #191a19;
+
+$transition-base: 0.3s all ease-out;
+
+$enable-shadows: false;
+
+$border-radius: 0.75rem;
+
+$btn-focus-box-shadow: none;
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 1rem;
+$btn-border-radius: $border-radius;
+$btn-transition: $transition-base;
+
+$nav-link-transition: $transition-base;
+
+$input-focus-box-shadow: none;
+$input-transition: $transition-base;
+$input-border-radius: $border-radius;
+$input-transition: $transition-base;
+
+$link-color: $dark;
+$link-color-dark: $white;
+$link-decoration: none;
+
+$modal-fade-transform: scale(0.95);
+
+$offcanvas-border-width: 0;
+$offcanvas-vertical-height: 100vh;
+
+$list-group-border-width: 0;
+$list-group-item-padding-x: 0;
+$list-group-bg: inherit;
+
+$headings-margin-bottom: 0;
+$paragraph-margin-bottom: 0;
+
+// @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/card";
+@import "../node_modules/bootstrap/scss/modal";
+@import "../node_modules/bootstrap/scss/offcanvas";
+@import "../node_modules/bootstrap/scss/toasts";
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/spinners";
+@import "../node_modules/bootstrap/scss/list-group";
+@import "../node_modules/bootstrap/scss/popover";
+@import "../node_modules/bootstrap/scss/dropdown";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+header {
+  background-color: var(--bs-body-bg);
+}
+
+[data-bs-theme="light"] {
+  --bs-body-bg: var(--bs-light);
+  --bs-body-color: var(--bs-dark);
+  --bs-link-color: var(--bs-dark);
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--bs-dark);
+  }
+
+  .card {
+    --bs-card-bg: var(--bs-white);
+  }
+
+  .modal {
+    --bs-modal-bg: var(--bs-white);
+  }
+
+  .modal-backdrop {
+    --bs-backdrop-bg: var(--bs-light);
+  }
+
+  .offcanvas {
+    --bs-offcanvas-bg: var(--bs-white);
+  }
+
+  .popover {
+    --bs-popover-bg: var(--bs-white);
+  }
+
+  aside {
+    background-color: $white;
+  }
+
+  .nav-link {
+    box-shadow: $box-shadow;
+    &:hover {
+      border: 1px solid $dark !important;
+      background-color: $light;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  .nav-link.active {
+    border: 1px solid $dark;
+    background-color: $light;
+  }
+
+  .navbar-brand img,
+  .weather-icon {
+    filter: drop-shadow(0 0 0.5rem rgba($color: $secondary, $alpha: 0.1));
+  }
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: var(--bs-black);
+  --bs-body-color: var(--bs-white);
+  --bs-link-color: var(--bs-white);
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--bs-white);
+  }
+
+  .card {
+    --bs-card-bg: var(--bs-dark);
+  }
+
+  .modal {
+    --bs-modal-bg: var(--bs-black);
+  }
+
+  .modal-backdrop {
+    --bs-backdrop-bg: var(--bs-dark);
+  }
+
+  .popover {
+    --bs-popover-bg: var(--bs-black);
+  }
+
+  aside {
+    background-color: $dark;
+  }
+
+  input {
+    background-color: $dark;
+  }
+
+  .nav-link {
+    &:hover {
+      border: 1px solid $white !important;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  .nav-link.active {
+    border: 1px solid $white;
+    background-color: $black;
+  }
+
+  .navbar-brand img,
+  .weather-icon {
+    filter: drop-shadow(0 0 0.5rem rgba($color: $secondary, $alpha: 0.1));
+  }
+}
+
+.card,
+.modal-content {
+  overflow: hidden;
+  border-radius: $border-radius;
+
+  .card-header,
+  .card-footer,
+  .modal-header,
+  .modal-footer {
+    background-color: inherit !important;
+    border: none !important;
+  }
+}
+
+.modal-content {
+  padding: 1rem;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $primary;
+  border-radius: $border-radius;
+}
+
+#spinner {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: $zindex-modal;
+}
+
+@media (max-width: 768px) {
+  .modal-backdrop {
+    --bs-backdrop-opacity: 1 !important;
+  }
+}
